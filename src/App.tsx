@@ -17,10 +17,10 @@ import {
 import { BoardState, AIWeights } from './types';
 
 const INITIAL_WEIGHTS: AIWeights = {
-  w_chain: 10,
-  w_connect2: 2,
-  w_connect3: 5,
-  w_height: 1,
+  w_chain: 6.9,
+  w_connect2: 0.9,
+  w_connect3: 12.9,
+  w_height: 0.3,
 };
 
 export default function App() {
@@ -300,13 +300,14 @@ function WeightSlider({
           <div className="text-[10px] text-slate-500">{desc}</div>
         </div>
         <div className="font-mono text-sm bg-slate-900 px-2 py-0.5 rounded text-slate-300">
-          {value}
+          {value.toFixed(1)}
         </div>
       </div>
       <input 
         type="range" 
         min={min} 
         max={max} 
+        step="0.1"
         value={value} 
         onChange={(e) => onChange(Number(e.target.value))}
         className={`w-full h-1.5 rounded-lg appearance-none cursor-pointer bg-slate-700 ${invertColor ? 'accent-rose-500' : 'accent-indigo-500'}`}
