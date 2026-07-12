@@ -1,0 +1,6 @@
+{
+  "name": "Puyo AI Engine Visualizer",
+  "description": "A visual simulator for a high-speed logic algorithm implementing Breadth-First Search and 24-pattern heuristic evaluation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
